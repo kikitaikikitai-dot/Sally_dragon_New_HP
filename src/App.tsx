@@ -3,13 +3,15 @@ import './App.css'
 function App() {
   return (
     <div className="app">
-      <header className="header animate-fade">
+      <div className="bg-grain"></div>
+      
+      <header className="header">
         <div className="container">
-          <nav>
-            <div className="logo">Sally Dragon Studio</div>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
+          <nav className="nav">
+            <div className="logo">SALLY DRAGON</div>
+            <ul className="nav-links">
+              <li><a href="#about">Provenance</a></li>
+              <li><a href="#services">Sanctuary</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -19,40 +21,88 @@ function App() {
       <main>
         <section className="hero">
           <div className="container">
-            <h1 className="animate-fade">聖龍の隠れ家へようこそ</h1>
-            <p className="subtitle animate-fade" style={{ animationDelay: '0.3s' }}>
-              世界の裏を知る者が、こっそり頼る。本物の秘匿鑑定。
-            </p>
-            <div className="cta-group animate-fade" style={{ animationDelay: '0.6s' }}>
-              <button className="btn-primary">鑑定を予約する</button>
-              <button className="btn-secondary">詳細を見る</button>
+            <div className="hero-content">
+              <span className="accent-text">Sacred Sanctuary of the Dragon</span>
+              <h1>聖龍の隠れ家、<br />再誕の刻。</h1>
+              <p className="hero-p">
+                世界の裏を知る者が、こっそり頼る。<br />
+                イギリスと神道の系譜が交差する、唯一無二の秘匿鑑定室へようこそ。
+              </p>
+              <div className="cta-group">
+                <a href="#contact" className="btn btn-filled">鑑定を予約する</a>
+                <a href="#services" className="btn" style={{ marginLeft: '1rem' }}>儀式の内容</a>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="about" className="section">
           <div className="container">
-            <h2>Soul Of Sally Dragon</h2>
-            <div className="grid">
-              <div className="text-block">
-                <p>
-                  神道の家系に生まれ、イギリスで研鑽を積んだ本物の占術。
-                  タロット、トランプ、そして霊視。
-                  海外の第一線で活躍する日本人の皆様へ、静寂と叡智を届けます。
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+              <div className="about-text" style={{ animation: 'reveal-up 1.2s ease forwards' }}>
+                <h2 className="section-title" style={{ textAlign: 'left' }}>The Soul of <br />Sally Dragon</h2>
+                <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
+                  宮柱と巫女の血を引き、10代から過酷な滝行を完遂。<br />
+                  イギリスから招聘した本流の師のもとで6年。
                 </p>
+                <p style={{ opacity: 0.8 }}>
+                  画家、政治家、刑事、そして経営者。<br />
+                  「口の堅い」プロフェッショナルたちが最後に行き着く、<br />
+                  静寂と知性に満ちた中世魔術師の書斎へ。
+                </p>
+              </div>
+              <div className="about-visual" style={{ 
+                height: '500px', 
+                background: 'rgba(var(--clr-accent-rgb), 0.05)', 
+                border: '1px solid rgba(var(--clr-accent-rgb), 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '5rem',
+                color: 'rgba(var(--clr-accent-rgb), 0.1)',
+                fontFamily: 'var(--font-display)'
+              }}>
+                龍
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" className="section" style={{ background: 'var(--clr-secondary)' }}>
+          <div className="container">
+            <h2 className="section-title">Sanctuary Services</h2>
+            <div className="service-grid">
+              <div className="service-card">
+                <span style={{ color: 'var(--clr-accent)', fontSize: '0.8rem', letterSpacing: '0.3em' }}>DIVINATION I</span>
+                <h3>秘匿タロット・トランプ</h3>
+                <p>100種以上のカードと中世イギリスの伝統技法。人生の裏側にある「真実」を照らし出します。</p>
+              </div>
+              <div className="service-card">
+                <span style={{ color: 'var(--clr-accent)', fontSize: '0.8rem', letterSpacing: '0.3em' }}>DIVINATION II</span>
+                <h3>霊視・前世鑑定</h3>
+                <p>表面的な悩みを超え、魂の系譜から現在の課題の根本を紐解く、深い対話。 </p>
+              </div>
+              <div className="service-card">
+                <span style={{ color: 'var(--clr-accent)', fontSize: '0.8rem', letterSpacing: '0.3em' }}>PREMIUM</span>
+                <h3>法人・経営戦略鑑定</h3>
+                <p>決断を迫られるリーダーへ。静寂の書斎にて、秘匿性の高い戦略的アドバイスを提供。 </p>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="footer">
+      <footer id="contact" className="footer">
         <div className="container">
-          <p>&copy; 2026 Sally Dragon Studio. All Rights Reserved.</p>
+          <h2 className="section-title">Connect with Sanctuary</h2>
+          <p>海外（英・独・米）からのオンライン鑑定も常時受け付けております。</p>
           <div className="social-links">
             <a href="https://x.com" target="_blank" rel="noreferrer">X (Twitter)</a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">INSTAGRAM</a>
           </div>
+          <p style={{ marginTop: '4rem', opacity: 0.4, fontSize: '0.8rem' }}>
+            &copy; 2026 SALLY DRAGON STUDIO. ALL RIGHTS RESERVED.
+          </p>
         </div>
       </footer>
     </div>
